@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import Admin from './pages/Admin/Admin';
+import AdminDashbard from './pages/AdminDashboard/AdminDashbard';
+import UserContext from "./config/context"
+import { useState } from 'react';
+import Booking from './pages/Booking/Booking';
+// import homePage from "./paspark_html/paspark/index.html"
 
 function App() {
+  const [state,setState] = useState()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <UserContext.Provider value={{state,setState}}>
+
+      <Routes>
+        <Route index element={<Home/>}/>
+        <Route path='/admin' element={<Admin />} />
+        <Route path='/admin/dashboard' element={<AdminDashbard/>} />
+        <Route path='/slots' element={<Booking/>} />
+      </Routes>
+    </UserContext.Provider>
+    </BrowserRouter>
   );
 }
 
