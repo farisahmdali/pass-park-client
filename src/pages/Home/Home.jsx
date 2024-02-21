@@ -33,10 +33,7 @@ function Home() {
             <div className="flex items-center w-5/6 justify-between">
               <h1 className="text-2xl font-bold mr-4">PASSPARK</h1>
               <ul className="flex space-x-4">
-                <li className="hover:underline cursor-pointer">HOME</li>
-                <li className="hover:underline cursor-pointer">ABOUT</li>
-                <li className="hover:underline cursor-pointer">WHY US</li>
-                <li className="hover:underline cursor-pointer">TETSIMONIAL</li>
+           
               </ul>
             </div>
           </nav>
