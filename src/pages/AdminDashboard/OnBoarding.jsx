@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import instance from "../../config/axios";
-import Cookies from "js-cookie";
 
 function OnBoarding({onClose}) {
   const [data, setData] = useState({ floorDetails: [] });

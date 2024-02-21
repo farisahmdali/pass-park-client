@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import instance from "../../config/axios";
 import Cookies from "js-cookie";

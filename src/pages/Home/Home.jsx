@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import bgImage from "../../asset/images/slider-bg.jpg";
 import instance from "../../config/axios";
 import { useNavigate } from "react-router-dom";
 import UserContext from "../../config/context";
